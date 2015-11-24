@@ -67,6 +67,33 @@ exports.arraysAnswers = {
   concat: function(arr1, arr2) {
     var arr = arr1.concat(arr2);
     return arr;
+  },
+  insert: function(arr, item, index) {
+    arr.splice(index, 0, item);
+    return arr;
+  },
+  count: function(arr, item) {
+    var count = 0;
+    for (var i = 0, len = arr.length; i < len; i++) {
+      if (arr[i] === item) {
+        count++;
+      }
+    }
+    return count;
+  },
+  duplicates: function(arr) {
+    var _arr = [];
+    for (var i = 0, len = arr.length; i < len; i++) {
+      if (this.count(arr, arr[i]) > 1 && _arr.indexOf(arr[i]) === -1) {
+        _arr.push(arr[i]);
+      }
+    }
+    return _arr;
+  },
+  square: function(arr) {
+    for (var i = 0, len = arr.length; i < len; i++) {
+      arr[i] *= arr[i];
+    }
+    return arr;
   }
-
 };
