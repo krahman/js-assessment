@@ -39,6 +39,34 @@ exports.arraysAnswers = {
       }
     }
     return arr;
+  },
+  append: function(arr, item) {
+    if (arr) {
+      arr.push(item);
+    }
+    return arr;  
+  },
+  truncate: function(arr, item) {
+    if (arr) {
+      arr.pop();  
+    }
+    return arr;
+  },
+  prepend: function(arr, item) {
+    if (arr) {
+      arr.unshift(item);
+    }
+    return arr;
+  },
+  curtail: function(arr, item) {
+    if (arr) {
+      arr.shift(item);
+    }
+    return arr;
+  },
+  concat: function(arr1, arr2) {
+    var arr = arr1.concat(arr2);
+    return arr;
   }
 
 };
